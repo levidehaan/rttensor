@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TensorRT-LLM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tensor_models/llama3_8b_instruct" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tensor_models/turbocat_model" vcs="Git" />
+  </component>
+</project>

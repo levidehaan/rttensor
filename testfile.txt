@@ -1,0 +1,190 @@
+You are Programming Architect. Experienced architect with a strong background in designing scalable software solutions.
+Your personal goal is: Oversee and coordinate the development process. Uses copius notes to provide guidance to the team. Uses the review files to reference the goals of the project.
+You ONLY have access to the following tools, and should NEVER make up tools that are not listed here:
+
+noteManager: noteManager(action: 'string', note_id: 'integer', content: 'string', urgent: 'boolean') -      Manages project notes.      Args:         action (str): The action to perform ('add', 'update', 'remove', 'checkoff', 'mark_urgent', 'read').         note_id (int, optional): The ID of the note to update or remove. Defaults to None.         content (str, optional): The content of the note to add or update. Defaults to None.         urgent (bool, optional): Whether to mark the note as urgent. Defaults to False.      Returns:         str: A message indicating the result of the operation.     
+readReviewFile: readReviewFile(filename: 'string') - Reads the content of the review file. Takes filename as input.
+listReviewFiles: listReviewFiles() -      Lists all the files and directories in the strategies folder containing all the strategies for the company.     Returns:         str: A formatted string listing all files and directories.     
+SearchInternet: SearchInternet() - Useful to search the internet     about a given topic and return relevant results
+fetchWebpageContent: fetchWebpageContent() - Fetches the content of the body from a given URL using Pyppeteer.
+
+Use the following format:
+
+Thought: you should always think about what to do
+Action: the action to take, only one name of [noteManager, readReviewFile, listReviewFiles, SearchInternet, fetchWebpageContent], just the name, exactly as it's written.
+Action Input: the input to the action, just a simple a python dictionary, enclosed in curly braces, using " to wrap keys and values.
+Observation: the result of the action
+
+Once all necessary information is gathered:
+
+Thought: I now know the final answer
+Final Answer: the final answer to the original input question
+
+Current Task: Identify key functionalities required for the website's backend and frontend development, including user authentication, payment processing, email marketing integration, search functionality, and content management system.
+
+This is the expect criteria for your final answer: Your best answer to your co-worker asking you this, accounting for the context shared. 
+ you MUST return the actual complete content as the final answer, not a summary.
+
+This is the context you're working with:
+The website is a platform for buying and selling AI-powered automation training services. The target audience includes small businesses and large enterprises interested in leveraging open-source tools. Key objectives include offering targeted advertising, content marketing strategies, email marketing campaigns, partnerships with industry organizations, and tailoring the training program to meet specific needs of different company sizes.
+
+Begin! This is VERY important to you, use the tools available and give your best Final Answer, your job depends on it!
+
+Thought:
+ To identify key functionalities required for the website's backend and frontend development, I will first review any relevant project documents or review files. Then, based on the context provided about the platform and its objectives, I will outline the necessary features.
+
+Action: readReviewFile
+Action Input: {"filename": "project_documentation"}
+Observation: File not found: ./strategies/project_documentation
+ Thought: The project documentation file was not found in the strategies folder. However, based on the context provided about the platform and its objectives, I can still outline the necessary features without relying on additional documents.
+
+Action: noteManager
+Action Input: {"action": "add", "content": "Key functionalities required for website development:\n1. User authentication\n2. Payment processing\n3. Email marketing integration\n4. Search functionality\n5. Content management system\n6. Targeted advertising\n7. Content marketing strategies\n8. Email marketing campaigns\n9. Partnerships with industry organizations\n10. Customizable training program"}
+Observation: Note added with ID 1.
+ Thought: I have identified the key functionalities required for the website's development and added them to a note. Now, I will search the internet to find out more about each functionality and how they can be implemented on the platform.
+
+Action: SearchInternet
+Action Input: {"query": "User authentication in web development"}
+Observation: Title: Web Application Authentication: How It Works and How to ...
+Link: https://www.authgear.com/post/web-application-authentication-guide
+Snippet: The third-party access authentication can work in two ways: Via API-token: it's usually the same as we discussed above on JWT, where the token is sent to the authorization header and handled at some API gateway to authenticate the user.; Via Open Authentication (OAuth): as you might have guessed by its name, OAuth is an open protocol that allows secure authentication methods from the web ...
+
+-----------------
+Title: What is the most common way to authenticate a modern ...
+Link: https://stackoverflow.com/questions/58339005/what-is-the-most-common-way-to-authenticate-a-modern-web-app
+Snippet: 1.Basic Auth. In Basic authentication user sends his credential encoded by base64 encoder. · 2. JWT / Bearer token · 3. API key · 4. Oauth2. · 5.2 answers · Top answer: As far as web application is concerned web application request should have state, session ...
+
+-----------------
+Title: Medium medium.com › @albert.kim › understanding-user-authentication-in-your-web-app-and-how-to-implement-it-part-1-the-high-level-ab91336ab77c Understanding User Authentication in your Web App and how to implement it Part 1 (the high level overview). | by Albert Kim | Medium
+Link: https://medium.com/@albert.kim/understanding-user-authentication-in-your-web-app-and-how-to-implement-it-part-1-the-high-level-ab91336ab77c
+Snippet: Stay tuned for part 2 where I walk through the steps to create a working full-stack web app with user authentication in React and Node… Just set up a prompt that accepts a user name and password ...
+
+-----------------
+Title: Popular Authentication Methods for Web Apps
+Link: https://www.baeldung.com/cs/authentication-web-apps
+Snippet: Web app authentication involves several methods, including cookies, JWT, OAuth, API Token, SAML, and OpenID. Depending on the use case and the security requirements, they have various advantages and downsides. Now, let’s discuss a few benefits and shortcomings of commonly used authentication methods: \. Method.
+
+-----------------
+
+
+You ONLY have access to the following tools, and should NEVER make up tools that are not listed here:
+
+noteManager: noteManager(action: 'string', note_id: 'integer', content: 'string', urgent: 'boolean') -      Manages project notes.      Args:         action (str): The action to perform ('add', 'update', 'remove', 'checkoff', 'mark_urgent', 'read').         note_id (int, optional): The ID of the note to update or remove. Defaults to None.         content (str, optional): The content of the note to add or update. Defaults to None.         urgent (bool, optional): Whether to mark the note as urgent. Defaults to False.      Returns:         str: A message indicating the result of the operation.     
+readReviewFile: readReviewFile(filename: 'string') - Reads the content of the review file. Takes filename as input.
+listReviewFiles: listReviewFiles() -      Lists all the files and directories in the strategies folder containing all the strategies for the company.     Returns:         str: A formatted string listing all files and directories.     
+SearchInternet: SearchInternet() - Useful to search the internet     about a given topic and return relevant results
+fetchWebpageContent: fetchWebpageContent() - Fetches the content of the body from a given URL using Pyppeteer.
+
+Use the following format:
+
+Thought: you should always think about what to do
+Action: the action to take, only one name of [noteManager, readReviewFile, listReviewFiles, SearchInternet, fetchWebpageContent], just the name, exactly as it's written.
+Action Input: the input to the action, just a simple a python dictionary, enclosed in curly braces, using " to wrap keys and values.
+Observation: the result of the action
+
+Once all necessary information is gathered:
+
+Thought: I now know the final answer
+Final Answer: the final answer to the original input question
+
+ Thought: Based on my research about user authentication in web development, it's clear that implementing a secure and reliable authentication system is crucial for our platform. Some common methods include JWT (JSON Web Tokens), OAuth, API tokens, and cookies. Given the context of our platform, I believe using JWT or OAuth would be suitable due to their stateless nature and support for multiple platforms.
+
+Now, let's move on to the next functionality: payment processing.
+
+Action: SearchInternet
+Action Input: {"query": "Payment processing in web development"}
+Observation: Title: MDN Web Docs developer.mozilla.org › en-US › docs › Web › API › Payment_Request_API › Concepts Payment processing concepts - Web APIs | MDN
+Link: https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts
+Snippet: A user agent may provide built-in support for certain types of payments. In addition, the Payment Handler API can be used to establish support for additional payment method providers, in browsers that support it. In either case, the payment handler is responsible for: Making sure a payment can be made. The conditions that make payment possible vary depending on the payment method and the user ...
+
+-----------------
+Title: How to integrate a payment gateway into a website
+Link: https://stripe.com/resources/more/how-to-integrate-a-payment-gateway-into-a-website
+Snippet: Aug 7, 2023 — 1. Choose a payment gateway. The first step is to select a payment gateway that aligns with your business needs. · 2. Set up a merchant account.
+
+-----------------
+Title: Cardpaymentoptions cardpaymentoptions.com › credit-card-processing › best-web-developers Best Merchant Accounts for Web Developers
+Link: https://www.cardpaymentoptions.com/credit-card-processing/best-web-developers/
+Snippet: 
+
+-----------------
+Title: arc.dev arc.dev › developers › payment gateway Hire Top Remote Payment gateway Developers - Arc
+Link: https://arc.dev/hire-developers/payment-gateway
+Snippet: 
+
+-----------------
+ Thought: Based on my research about payment processing in web development, it's important to integrate a secure and reliable payment gateway into our platform. This will allow users to make purchases for the AI-powered automation training services offered on our website. Some popular payment gateways include Stripe, PayPal, and Authorize.net. Given the context of our platform, I believe using Stripe would be suitable due to its wide range of features, including support for multiple currencies and customizable checkout experiences.
+
+Now, let's move on to the next functionality: email marketing integration.
+
+Action: SearchInternet
+Action Input: {"query": "Email marketing integration in web development"}
+Observation: Title: How Can You Tie Email Marketing Into Your Website ...
+Link: https://www.ignitro.com/blog/how-can-you-tie-email-marketing-into-your-website-integration/
+Snippet: One of our favorite website integration for email marketing is to program your email marketing software to automatically pull content from your website or blog—such as your last 2-3 blogs—format them into the template you set up for your newsletters, and automatically send them out to your chosen email list. ... By understanding both sides ...
+
+-----------------
+Title: Emfluence emfluence.com › home › blog › 10 ways to integrate your website and email strategies 10 Ways to Integrate Your Email Strategy and Website Strategy
+Link: https://emfluence.com/blog/website-email-strategy
+Snippet: Automated Content Distribution. If you have regular communications going out with the same look and structure time after time, and you have an online source for that content, there’s a good chance the process of creating and deploying that message can be automated. One basic example of this is Automated Newsletters that promote blog traffic.
+
+-----------------
+Title: Email marketing - Integrations
+Link: https://university.webflow.com/integrations-type/email-marketing
+Snippet: Email marketing. Create and send professional emails and newsletters. AWeber allows you to create and send professional emails to your customers. SendPulse offers multiple channels of communication: email, web push notifications, SMS & Viber. GetResponse helps you design responsive emails to send to targeted subscriber lists.
+
+-----------------
+Title: Campaign Monitor campaignmonitor.com › resources › guides › integrate-email-marketing-software How to Implement Email Integration with Other Apps | Campaign Monitor
+Link: https://www.campaignmonitor.com/resources/guides/integrate-email-marketing-software/
+Snippet: 
+
+-----------------
+ Thought: Based on my research about email marketing integration in web development, it's essential to have a system that allows us to send targeted emails and newsletters to our users. This will help us with content marketing strategies, email marketing campaigns, and partnerships with industry organizations. Some popular email marketing platforms include Mailchimp, Constant Contact, and Campaign Monitor. Given the context of our platform, I believe using Mailchimp would be suitable due to its wide range of features, including automated workflows, customizable templates, and integration with various third-party tools.
+
+Now, let's move on to the next functionality: search functionality.
+
+Action: SearchInternet
+Action Input: {"query": "Search functionality in web development"}
+Observation: Title: How to Add Search Functionality to a Frontend Application
+Link: https://www.freecodecamp.org/news/how-to-add-search-to-frontend-app/
+Snippet: Let's do the following: In the src/App.js, replace the onkey event of the first search box with the following: onKeyUp= { (e) => filterCountryByName ( e.target.value, hatches, setFilterByNameResults, setSearchString, setSearchResult ) } Replace the onkey event of the second search box with the following:
+
+-----------------
+Title: Stack Overflow stackoverflow.com › questions › 34314 › how-do-i-implement-search-functionality-in-a-website How do I implement Search Functionality in a website? - Stack Overflow
+Link: https://stackoverflow.com/questions/34314/how-do-i-implement-search-functionality-in-a-website
+Snippet: Apache Lucene is a high-performance, full-featured text search engine library written entirely in Java. It is a technology suitable for nearly any application that requires full-text search, especially cross-platform. It is available in java and .net. It is also in available in php in the form of a zend framework module.
+
+-----------------
+Title: Freddiedodo freddiedodo.com › blog › web-design › web-development-fundamentals › implementing-search-functionality-on-a-website The Importance of Implementing Search Functionality on a Website
+Link: https://www.freddiedodo.com/blog/web-design/web-development-fundamentals/implementing-search-functionality-on-a-website
+Snippet: Conclusion. Implementing search functionality on your website is a valuable investment that can greatly enhance the user experience. By allowing visitors to quickly find the information they need, you can increase engagement and satisfaction. Remember to choose the right search engine, plan your implementation carefully, and optimize the search ...
+
+-----------------
+Title: The generic search element - HTML - MDN Web Docs - Mozilla
+Link: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/search
+Snippet: Jun 14, 2024 — This example demonstrates a page with two search features. The first is a global site search located on the header. The second is a search and ...
+
+-----------------
+
+
+You ONLY have access to the following tools, and should NEVER make up tools that are not listed here:
+
+noteManager: noteManager(action: 'string', note_id: 'integer', content: 'string', urgent: 'boolean') -      Manages project notes.      Args:         action (str): The action to perform ('add', 'update', 'remove', 'checkoff', 'mark_urgent', 'read').         note_id (int, optional): The ID of the note to update or remove. Defaults to None.         content (str, optional): The content of the note to add or update. Defaults to None.         urgent (bool, optional): Whether to mark the note as urgent. Defaults to False.      Returns:         str: A message indicating the result of the operation.     
+readReviewFile: readReviewFile(filename: 'string') - Reads the content of the review file. Takes filename as input.
+listReviewFiles: listReviewFiles() -      Lists all the files and directories in the strategies folder containing all the strategies for the company.     Returns:         str: A formatted string listing all files and directories.     
+SearchInternet: SearchInternet() - Useful to search the internet     about a given topic and return relevant results
+fetchWebpageContent: fetchWebpageContent() - Fetches the content of the body from a given URL using Pyppeteer.
+
+Use the following format:
+
+Thought: you should always think about what to do
+Action: the action to take, only one name of [noteManager, readReviewFile, listReviewFiles, SearchInternet, fetchWebpageContent], just the name, exactly as it's written.
+Action Input: the input to the action, just a simple a python dictionary, enclosed in curly braces, using " to wrap keys and values.
+Observation: the result of the action
+
+Once all necessary information is gathered:
+
+Thought: I now know the final answer
+Final Answer: the final answer to the original input question
+
+
